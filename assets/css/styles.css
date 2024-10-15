@@ -1,9 +1,9 @@
-:root{
-    --primary-color: #0A1128;
-    --white-color: #fff;
-    --light-gray-color: #eee;
-    --gap: 3rem;
-    --secondary-color: crimson;
+:root {
+  --primary-color: #0a1128;
+  --white-color: #fff;
+  --light-gray-color: #eee;
+  --gap: 3rem;
+  --secondary-color: crimson;
 }
 
 * {
@@ -35,6 +35,7 @@ h6 {
 
 h1 {
   font-size: 6rem;
+  font-style: oblique;
   text-transform: uppercase;
 }
 
@@ -61,8 +62,8 @@ h6 {
   font-size: 3.5rem;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
 p {
@@ -82,18 +83,20 @@ table caption {
   margin-bottom: 1rem;
 }
 
-table td, table th {
+table td,
+table th {
   white-space: nowrap;
   padding: 1rem;
   text-align: left;
   border: 0.1rem solid var(--light-gray-color);
 }
 
-tfoot td, table th {
+tfoot td,
+table th {
   background: var(--light-gray-color);
 }
 
-.menu-spacing{
+.menu-spacing {
   height: 65px;
 }
 
@@ -102,85 +105,85 @@ body .full-width {
   flex: 1 1 100%;
 }
 
-.main-bg{
-    background-image: url('../img/main-bg.svg');
-    background-size: cover;
-    background-position: center center;
-    color: var(--white-color);
+.main-bg {
+  background-image: url("../img/main-bg.svg");
+  background-size: cover;
+  background-position: center center;
+  color: var(--white-color);
 }
 
-.white-bg{
-    background: var(--white-color);
-    color: var(--primary-color);
+.white-bg {
+  background: var(--white-color);
+  color: var(--primary-color);
 }
 
-.main-content{
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 8rem var(--gap);
+.main-content {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 8rem var(--gap);
 }
 
-.section{
-    min-height: 100vh;
+.section {
+  min-height: 100vh;
 }
 
 .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    border-bottom: 0.1rem solid var(--light-gray-color);
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-bottom: 0.1rem solid var(--light-gray-color);
+  z-index: 1;
 }
 
 .menu-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0;
-    padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.menu h1{
-    font-size: 2.3rem;
-    color: var(--primary-color);
+.menu h1 {
+  font-size: 2.3rem;
+  color: var(--primary-color);
 }
 
-.menu h1 a{
-    color: inherit;
+.menu h1 a {
+  color: inherit;
 }
 
-.menu ul{
-    list-style: none;
-    display: flex;
+.menu ul {
+  list-style: none;
+  display: flex;
 }
 
-.menu ul li a{
-    display: block;
-    padding: 2rem;
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    position: relative;
+.menu ul li a {
+  display: block;
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  position: relative;
 }
 
-.menu ul li a::after{
-    content: '';
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    width: 0;
-    height: 0.2rem;
-    background: var(--secondary-color);
-    transition: all 300ms ease-in-out;
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background: var(--secondary-color);
+  transition: all 300ms ease-in-out;
 }
 
-.menu ul li a:hover::after{
-   width: 50%;
-   left: 25%;
+.menu ul li a:hover::after {
+  width: 50%;
+  left: 25%;
 }
 
-.intro-content{
+.intro-content {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -189,12 +192,12 @@ body .full-width {
   min-height: 100vh;
 }
 
-.intro-text-content, .intro-img{
+.intro-text-content,
+.intro-img {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
 }
-
 
 .intro-img img {
   max-width: 100%;
@@ -207,7 +210,7 @@ body .full-width {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
 }
 
@@ -217,7 +220,6 @@ body .full-width {
   justify-content: center;
   min-height: 100vh;
 }
-
 
 .grid-main-heading {
   margin-bottom: 1rem;
@@ -234,25 +236,25 @@ body .full-width {
   counter-reset: grid-counter;
 }
 
-.grid h3{
+.grid h3 {
   font-size: 3rem;
   position: relative;
   padding-left: 5rem;
   padding-bottom: 2rem;
 }
 
-.grid h3::before{
+.grid h3::before {
   counter-increment: grid-counter;
   content: counter(grid-counter);
   position: absolute;
   font-size: 8rem;
   font-style: italic;
   top: -4rem;
-  left:-2rem;
+  left: -2rem;
   transform: rotate(5deg);
 }
 
-.gallery-img{
+.gallery-img {
   width: 100%;
   max-width: 36rem;
   max-height: 36rem;
@@ -299,7 +301,8 @@ body .full-width {
   margin-bottom: 1rem;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   border: none;
   background: var(--white-color);
   padding: 1.5rem 2rem;
@@ -308,7 +311,8 @@ body .full-width {
   outline: none;
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
   box-shadow: 0 0 1rem 0.2rem var(--secondary-color);
 }
 
@@ -347,4 +351,93 @@ body .full-width {
 
 .heart {
   color: var(--secondary-color);
+}
+
+.close-menu {
+  display: none;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--white-color);
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--primary-color);
+  transform: rotate(-90deg);
+  border: 0.1rem solid var(--primary-color);
+}
+
+@media (max-width: 80rem) {
+  .intro-content,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .gallery-img img {
+    width: 100%;
+  }
+
+  .grid-one-content {
+    display: block;
+  }
+
+  .menu {
+    bottom: 0;
+  }
+
+  .menu-content,
+  .menu-content ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu-content {
+    height: 100vh;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .close-menu-label::after {
+    content: "☰";
+    position: fixed;
+    z-index: 2;
+    top: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-size: 3rem;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  .close-menu:checked ~ .menu {
+    display: block;
+  }
+
+  .close-menu:checked ~ .close-menu-label::after {
+    display: block;
+    content: "✕";
+  }
+
+  .menu-spacing {
+    display: none;
+  }
 }
